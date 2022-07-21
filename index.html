@@ -7,7 +7,20 @@
     <title>Momentum App</title>
   </head>
   <body>
-    <form id="login-form">
+    <!-- Status bar -->
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>Links</span>
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <div class="status-bar__column">weather and place</div>
+    </div>
+
+    <!-- Clock -->
+    <h2 id="clock">00:00:00</h2>
+
+    <!-- Log in -->
+    <form id="login-form" class="hidden">
       <input
         required
         maxlength="15"
@@ -17,6 +30,16 @@
       <input type="submit" value="Log In" />
     </form>
     <h1 id="greeting" class="hidden"></h1>
+
+    <!-- Clock -->
+
+    <!-- icons -->
+    <script
+      src="https://kit.fontawesome.com/6376ec8438.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- js -->
     <script src="log-in.js"></script>
+    <script src="clock.js"></script>
   </body>
 </html>
