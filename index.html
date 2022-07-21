@@ -9,11 +9,22 @@
   <body>
     <!-- Status bar -->
     <div class="status-bar">
-      <div class="status-bar__column">
-        <span>Links</span>
-        <i class="fa-solid fa-magnifying-glass"></i>
+      <div class="status-bar__column status-bar__column--left">
+        <span class="status-bar__column--links">Links</span>
+        <div class="status-bar__search">
+          <label for="status-bar__search"
+            ><i
+              class="status-bar__search--icon fa-solid fa-magnifying-glass"
+            ></i
+          ></label>
+          <input
+            type="text"
+            id="status-bar__search"
+            class="status-bar__search--input"
+          />
+        </div>
       </div>
-      <div class="status-bar__column">weather and place</div>
+      <div class="status-bar__column--right">weather and place</div>
     </div>
 
     <!-- Clock -->
@@ -21,15 +32,14 @@
 
     <!-- Log in -->
     <form id="login-form" class="hidden">
-      <input
-        required
-        maxlength="15"
-        type="text"
-        placeholder="What is your name?"
-      />
-      <input type="submit" value="Log In" />
+      <h1 class="login-form__question">What is your name?</h1>
+      <input class="login-form__input" required maxlength="15" type="text" />
+      <!-- <input class="login-form__submit" type="submit" value="Log In" /> -->
     </form>
     <h1 id="greeting" class="hidden"></h1>
+
+    <!-- Todo List -->
+    <h2 class="todo-list__question">What is your main focus for today?</h2>
 
     <!-- Quotes -->
     <div id="quote">

@@ -2,8 +2,12 @@
   display: none;
 }
 
+@import "reset.css";
+
 * {
+  box-sizing: border-box;
   color: white;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Background images */
@@ -18,10 +22,46 @@ img {
   z-index: -1;
   opacity: 0.9;
 }
-
+body {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 /* Status bar */
 .status-bar {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.status-bar__column {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.status-bar__column--links {
+  font-size: 24px;
+  font-weight: 510;
+  margin-right: 10px;
+}
+
+.status-bar__search:hover {
+  border-bottom: 1px solid white;
+}
+.status-bar__search--icon {
+  font-size: 20px;
+}
+.status-bar__search--input {
+  background-color: transparent;
+  border: none;
+}
+
+/* Clock */
+#clock {
+  margin-top: 240px;
+  font-size: 150px;
 }
