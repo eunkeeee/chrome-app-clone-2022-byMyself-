@@ -9,6 +9,7 @@
   <body>
     <!-- Status bar -->
     <div class="status-bar">
+      <!-- Links and search -->
       <div class="status-bar__column status-bar__column--left">
         <span class="status-bar__column--links">Links</span>
         <div class="status-bar__search">
@@ -24,7 +25,10 @@
           />
         </div>
       </div>
-      <div class="status-bar__column--right">weather and place</div>
+      <!-- Weather and location -->
+      <div id="weather" class="status-bar__column--right">
+        <span></span><span></span>
+      </div>
     </div>
 
     <!-- Clock -->
@@ -62,5 +66,6 @@
     <script src="js/quotes.js"></script>
     <script src="js/backgrounds.js"></script>
     <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
   </body>
 </html>
