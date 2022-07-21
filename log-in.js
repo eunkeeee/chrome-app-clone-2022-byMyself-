@@ -15,6 +15,7 @@ function onLoginSubmit(event) {
   paintGreetings(username);
 }
 function paintGreetings(submittedName) {
+  // *** 시간대에 따라 인사말이 다르도록 수정 !!!
   greeting.innerText = `Hello ${submittedName}`;
   greeting.classList.remove(HIDDEN_CLASSNAME);
 }
