@@ -45,8 +45,8 @@ const quotes = [
 
 const quote = document.querySelector(".quote__context");
 const author = document.querySelector(".quote__author");
-const randomnumber = Math.floor(Math.random() * quotes.length);
-const todaysQuote = quotes[randomnumber];
+const randomNumber = Math.floor(Math.random() * quotes.length);
+const todaysQuote = quotes[randomNumber];
 
 quote.innerText = todaysQuote.quote;
 author.innerText = todaysQuote.author;
