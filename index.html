@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles_before.css" />
     <title>Momentum App</title>
   </head>
   <body>
@@ -39,7 +39,12 @@
     <h1 id="greeting" class="hidden"></h1>
 
     <!-- Todo List -->
-    <h2 class="todo-list__question">What is your main focus for today?</h2>
+    <form id="todo-form">
+      <input type="text" placeholder="Write a To Do and Press Enter" required />
+    </form>
+    <ul id="todo-list">
+      <li>hello</li>
+    </ul>
 
     <!-- Quotes -->
     <div id="quote">
@@ -58,5 +63,6 @@
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/backgrounds.js"></script>
+    <script src="js/todo.js"></script>
   </body>
 </html>
