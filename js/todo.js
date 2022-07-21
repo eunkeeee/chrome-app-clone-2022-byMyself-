@@ -6,7 +6,7 @@ const KEY_TODOS = "todos";
 
 let toDos = [];
 
-function saveToDos(toDos) {
+function saveToDos() {
   localStorage.setItem(KEY_TODOS, JSON.stringify(toDos));
 }
 
@@ -31,7 +31,7 @@ function paintToDo(newTodo) {
   button.addEventListener("click", deleteToDo);
 
   li.appendChild(span);
-  li.append(button);
+  li.appendChild(button);
   toDoList.appendChild(li);
 }
 
@@ -47,7 +47,7 @@ function handleToDoSubmit(event) {
 
   paintToDo(newTodoObj);
   toDos.push(newTodoObj);
-  saveToDos(toDos);
+  saveToDos();
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
