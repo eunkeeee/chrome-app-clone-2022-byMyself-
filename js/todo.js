@@ -4,7 +4,7 @@ const toDoList = document.getElementById("todo-list");
 
 const KEY_TODOS = "todos";
 
-const toDos = [];
+let toDos = [];
 
 function deleteToDo(event) {
   const li = event.target.parentElement;
@@ -39,7 +39,6 @@ const savedToDos = localStorage.getItem(KEY_TODOS);
 if (savedToDos) {
   // if there is something inside, load todos
   const parsedToDos = JSON.parse(savedToDos);
-  parsedToDos.forEach((element) => {
-    console.log("this is the todo of ", element);
-  });
+  toDos = parsedToDos;
+  parsedToDos.forEach(paintToDo);
 }
