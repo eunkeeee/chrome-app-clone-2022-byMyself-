@@ -3,55 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles_before.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>Momentum App</title>
   </head>
   <body>
-    <!-- Status bar -->
-    <div class="status-bar">
-      <!-- Links and search -->
-      <div class="status-bar__column status-bar__column--left">
-        <span class="status-bar__column--links">Links</span>
-        <div class="status-bar__search">
-          <label for="status-bar__search"
-            ><i
-              class="status-bar__search--icon fa-solid fa-magnifying-glass"
-            ></i
-          ></label>
-          <input
-            type="text"
-            id="status-bar__search"
-            class="status-bar__search--input"
-          />
+    <div class="apps">
+      <!-- Status bar -->
+      <!-- Links and Search -->
+      <div class="region status-bar">
+        <div id="search">
+          <div class="search__links">Links</div>
+          <div class="search__input">
+            <label for="search__input--input" class="search__input--icon"
+              ><i class="fa-solid fa-magnifying-glass"></i
+            ></label>
+            <input type="text" id="search__input--input" />
+          </div>
+        </div>
+        <!-- Weather and location -->
+        <div id="weather">
+          <span class="current_weather"></span
+          ><span class="current_city"></span>
         </div>
       </div>
-      <!-- Weather and location -->
-      <div id="weather" class="status-bar__column--right">
-        <span></span><span></span>
+
+      <div class="region region-middle"></div>
+
+      <!-- Clock -->
+      <div class="region-clock"><h2 id="clock">00:00:00</h2></div>
+
+      <!-- Log in -->
+      <form id="login-form" class="hidden">
+        <h1 class="login-form__question">What is your name?</h1>
+        <input class="login-form__input" required maxlength="15" type="text" />
+        <!-- <input class="login-form__submit" type="submit" value="Log In" /> -->
+      </form>
+      <h1 id="greeting" class="hidden"></h1>
+
+      <!-- Todo List -->
+      <form id="todo-form">
+        <input
+          type="text"
+          placeholder="Write a To Do and Press Enter"
+          required
+        />
+      </form>
+      <ul id="todo-list"></ul>
+
+      <!-- Quotes -->
+      <div id="quote">
+        <span class="quote__context"></span>
+        <span class="quote__author"></span>
       </div>
-    </div>
-
-    <!-- Clock -->
-    <h2 id="clock">00:00:00</h2>
-
-    <!-- Log in -->
-    <form id="login-form" class="hidden">
-      <h1 class="login-form__question">What is your name?</h1>
-      <input class="login-form__input" required maxlength="15" type="text" />
-      <!-- <input class="login-form__submit" type="submit" value="Log In" /> -->
-    </form>
-    <h1 id="greeting" class="hidden"></h1>
-
-    <!-- Todo List -->
-    <form id="todo-form">
-      <input type="text" placeholder="Write a To Do and Press Enter" required />
-    </form>
-    <ul id="todo-list"></ul>
-
-    <!-- Quotes -->
-    <div id="quote">
-      <span class="quote__context"></span>
-      <span class="quote__author"></span>
     </div>
 
     <!-- icons -->
