@@ -1,6 +1,9 @@
 .hidden {
   display: none !important;
 }
+input:focus {
+  outline: none;
+}
 
 @import "reset.css";
 
@@ -45,6 +48,9 @@ img {
   opacity: 0.9;
 }
 .apps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 0px 10px;
 }
 
@@ -82,9 +88,7 @@ img {
 .search__input--icon {
   font-size: 15px;
 }
-#search__input--input:focus {
-  outline: none;
-}
+
 #weather {
   display: flex;
   flex-direction: column;
@@ -115,21 +119,45 @@ img {
 }
 
 /* Log in */
+.login-region {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 90px;
+}
 #login-form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 10px;
 }
-.login-form__input {
-  width: 50%;
+.login-form__question {
+  font-size: 40px;
+  font-weight: 530;
+}
+.login-form__input,
+#todo-input {
+  width: 75%;
   text-align: center;
+  font-size: 30px;
   border-bottom: 1px solid white;
 }
-.login-form__input:focus {
-  outline: none;
-}
+
 #greeting {
   display: flex;
   justify-content: center;
   margin: 0px;
+}
+
+/* Todo List */
+#todo-form {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+#todo-form label {
+  font-size: 33px;
 }
