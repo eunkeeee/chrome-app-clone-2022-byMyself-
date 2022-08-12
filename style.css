@@ -1,5 +1,5 @@
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 @import "reset.css";
@@ -10,10 +10,17 @@
   font-family: "Poppins", sans-serif;
 }
 
+/* hide scroll bar */
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
 body {
-  margin: 0px !important;
+  padding: 8px;
+  margin: 0px;
   width: 100vw;
   height: 100vh;
+  background-color: black;
 }
 
 .region {
@@ -45,6 +52,7 @@ img {
 .status-bar {
   height: 60px;
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
 }
 #search {
@@ -85,11 +93,14 @@ img {
 
 /* Region middle */
 .region-middle {
-  height: 150px;
+  height: 100px;
 }
 
 /* Clock */
 .region-clock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: 350px;
 }
 #clock {
@@ -97,4 +108,23 @@ img {
   text-align: center;
   line-height: 350px;
   font-size: 130px;
+}
+
+/* Log in */
+#login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login-form__input {
+  width: 50%;
+  text-align: center;
+  border-bottom: 1px solid white;
+}
+.login-form__input:focus {
+  outline: none;
+}
+#greeting {
+  display: flex;
+  justify-content: center;
 }
