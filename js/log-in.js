@@ -6,6 +6,10 @@ const HIDDEN_CLASSNAME = "hidden";
 const KEY_USERNAME = "username";
 
 const savedUsername = localStorage.getItem(KEY_USERNAME);
+const timeGreeting = () => {
+  const date = new Date();
+  let hours = date.getHours();
+};
 
 function onLoginSubmit(event) {
   event.preventDefault();
