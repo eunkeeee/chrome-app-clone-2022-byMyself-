@@ -63,7 +63,7 @@ const paintAuthor = () => {
       transform: ["translateY(-20px)"],
     },
     {
-      duration: 100,
+      duration: 250,
       fill: "forwards",
       easing: "ease-in-out",
     }
@@ -77,7 +77,7 @@ const hideAuthor = () => {
       transform: ["translateY(20px)"],
     },
     {
-      duration: 100,
+      duration: 250,
       fill: "forwards",
       easing: "ease-in-out",
     }

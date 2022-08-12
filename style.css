@@ -171,7 +171,9 @@ img {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 50px;
+  height: 100px;
+  /* animation에 대비 */
+  margin-top: 20px;
 }
 .quote__context {
   height: 20px;
