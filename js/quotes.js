@@ -43,10 +43,46 @@ const quotes = [
   },
 ];
 
+const quoteRegion = document.querySelector("#quote");
 const quote = document.querySelector(".quote__context");
 const author = document.querySelector(".quote__author");
 const randomNumber = Math.floor(Math.random() * quotes.length);
 const todaysQuote = quotes[randomNumber];
 
-quote.innerText = todaysQuote.quote;
+quote.innerText = `"${todaysQuote.quote}"`;
 author.innerText = todaysQuote.author;
+
+const toggleAuthor = () => {
+  author.classList.toggle("visibility-hidden");
+};
+
+const paintAuthor = () => {
+  toggleAuthor();
+  quoteRegion.animate(
+    {
+      transform: ["translateY(-20px)"],
+    },
+    {
+      duration: 100,
+      fill: "forwards",
+      easing: "ease-in-out",
+    }
+  );
+};
+
+const hideAuthor = () => {
+  toggleAuthor();
+  quoteRegion.animate(
+    {
+      transform: ["translateY(20px)"],
+    },
+    {
+      duration: 100,
+      fill: "forwards",
+      easing: "ease-in-out",
+    }
+  );
+};
+
+quoteRegion.addEventListener("mouseover", paintAuthor);
+quoteRegion.addEventListener("mouseleave", hideAuthor);

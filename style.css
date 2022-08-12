@@ -1,6 +1,9 @@
 .hidden {
   display: none !important;
 }
+.visibility-hidden {
+  visibility: hidden;
+}
 input:focus {
   outline: none;
 }
@@ -137,7 +140,7 @@ img {
 }
 .login-form__input,
 #todo-input {
-  width: 75%;
+  width: 50%;
   text-align: center;
   font-size: 30px;
   border-bottom: 1px solid white;
@@ -160,4 +163,21 @@ img {
 }
 #todo-form label {
   font-size: 33px;
+}
+
+/* Quotes */
+#quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+.quote__context {
+  height: 20px;
+}
+
+.quote__author {
+  opacity: 0.8;
+  height: 20px;
 }
