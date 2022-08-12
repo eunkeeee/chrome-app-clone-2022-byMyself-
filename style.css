@@ -64,14 +64,15 @@ img {
   font-weight: 510;
   margin-right: 10px;
   opacity: 0.8;
-  transition: all ease-in-out 0.1s;
+  transition: all ease-in-out 0.3s;
 }
 .search__links:hover {
   opacity: 1;
 }
 .search__input {
   padding: 10px 0px;
-  transition: all ease-in-out 0.3s;
+  border-bottom: 1px solid transparent;
+  transition: all ease-in-out 0.2s;
   width: 300px;
 }
 .search__input:hover {
@@ -81,10 +82,14 @@ img {
 .search__input--icon {
   font-size: 15px;
 }
+#search__input--input:focus {
+  outline: none;
+}
 #weather {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
 }
 .current_weather {
   font-size: larger;
@@ -99,14 +104,13 @@ img {
 /* Clock */
 .region-clock {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 350px;
+  justify-content: center;
+  align-items: flex-end;
+  height: 260px;
 }
 #clock {
   margin: 0px;
-  text-align: center;
-  line-height: 350px;
+  line-height: 200px;
   font-size: 130px;
 }
 
@@ -127,4 +131,5 @@ img {
 #greeting {
   display: flex;
   justify-content: center;
+  margin: 0px;
 }

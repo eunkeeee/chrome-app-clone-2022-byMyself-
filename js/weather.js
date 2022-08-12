@@ -12,7 +12,9 @@ function onGeoSuccess(position) {
     .then((response) => response.json())
     .then((data) => {
       city.innerText = data.name;
+      city.style.fontSize = "12px";
       weather.innerText = `${data.weather[0].main} / ${data.main.temp}°C`;
+      weather.style.fontSize = "15px";
     });
 }
 function onGeoError() {
