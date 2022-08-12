@@ -15,6 +15,8 @@ function getClock() {
   const seconds = String(date.getSeconds()).padStart(2, "0");
   clock.innerText = `${hours}:${minutes}`;
 }
+function getGreetings() {}
 
 getClock();
 setInterval(getClock, 1000);
+getGreetings();

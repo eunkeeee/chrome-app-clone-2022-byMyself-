@@ -10,6 +10,12 @@
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  margin: 0px !important;
+  width: 100vw;
+  height: 100vh;
+}
+
 .region {
   width: 100%;
 }
@@ -32,7 +38,7 @@ img {
   opacity: 0.9;
 }
 .apps {
-  padding: 20px;
+  padding: 0px 10px;
 }
 
 /* Status Bar */
@@ -46,7 +52,7 @@ img {
   align-items: center;
 }
 .search__links {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 510;
   margin-right: 10px;
   opacity: 0.8;
@@ -65,7 +71,7 @@ img {
   box-sizing: unset;
 }
 .search__input--icon {
-  font-size: 20px;
+  font-size: 15px;
 }
 #weather {
   display: flex;
